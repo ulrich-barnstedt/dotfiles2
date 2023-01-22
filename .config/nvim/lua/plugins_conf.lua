@@ -1,0 +1,8 @@
+require "plugins/tree_config"
+require "plugins/lualine_config"
+require "plugins/autopairs_config"
+require "plugins/presence_config"
+require "plugins/comment_config"
+require "plugins/treesitter_config"
+require "plugins/bufferline_config"
+require "plugins/toggleterm_config"

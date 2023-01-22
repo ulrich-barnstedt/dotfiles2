@@ -1,0 +1,7 @@
+set selection-clipboard clipboard
+set font "jetbrains-mono 11"
+set statusbar-bg "#262626"
+set guioptions "sv"
+set statusbar-home-tilde true
+set windowtitle-home-tilde true
+set selection-notification false
