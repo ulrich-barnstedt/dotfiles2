@@ -6,6 +6,7 @@ function nvim () {
 function smbmount () {
     command mkdir -p /home/ulrich/shares/$1
     command sudo mount -t cifs -o username=ulrich.barnstedt //htldaten/$1 /home/ulrich/shares/$1
+    # command mount -t cifs -o username=ulrich.barnstedt //htldaten/$1 /home/ulrich/shares/$1
 }
 
 function ff () { 
@@ -53,7 +54,8 @@ alias lgtree="exa -T -L 2 | lolcat -t"
 alias v="nvim"
 alias alt="update-alternatives"
 alias javac8a="find . -name *.java -print | xargs /usr/lib/jvm/java-8-openjdk-amd64/bin/javac"
-alias update="sudo apt update && sudo apt upgrade -y && sudo snap refresh && rustup update && cargo install-update -a && brew update && brew upgrade && flatpak update "
+alias update="sudo apt update && sudo apt upgrade -y && sudo snap refresh && rustup update && cargo install-update -a && brew update && brew upgrade && flatpak update && poetry self update "
+alias pkgclean="sudo apt autoremove && flatpak uninstall --unused && brew autoremove"
 alias dndg="(cd ~/Programming/Projects/JS/dnd-cli && node index.js c)"
 alias cp="cp -i"
 alias ite_kb="ite8291r3-ctl"

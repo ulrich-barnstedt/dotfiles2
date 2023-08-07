@@ -20,3 +20,4 @@ vim.opt.hidden = true
 vim.opt.scrolloff = 2
 vim.opt.number = true
 vim.opt.termguicolors = true
+vim.opt.linebreak = true

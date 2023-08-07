@@ -27,7 +27,7 @@ set NERDTree
 map <C-Q> :NERDTree<CR>
 map \r <Action>(ReformatCode)
 
-:set relativenumber
+"":set relativenumber
 :set number
 
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
