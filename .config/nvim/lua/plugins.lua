@@ -17,11 +17,7 @@ return require('packer').startup(function(use)
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate'
     }   
-    use {
-        'akinsho/bufferline.nvim', 
-        tag = "v3.*",
-        requires = 'nvim-tree/nvim-web-devicons'
-    }   
+    use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
     use {"akinsho/toggleterm.nvim", tag = '*', config = function()
         require("toggleterm").setup()
     end}

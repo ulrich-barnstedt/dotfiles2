@@ -9,6 +9,12 @@ function smbmount () {
     # command mount -t cifs -o username=ulrich.barnstedt //htldaten/$1 /home/ulrich/shares/$1
 }
 
+# function ssh () {
+#     echo -ne "\033]0; Alacritty (SSH) \a"
+#     ssh $@
+#     # echo -ne "\e]0;Alacritty\a"
+# }
+
 function ff () { 
     command find . -maxdepth ${2:-3} -name "*${1}*"
 }
@@ -54,12 +60,15 @@ alias lgtree="exa -T -L 2 | lolcat -t"
 alias v="nvim"
 alias alt="update-alternatives"
 alias javac8a="find . -name *.java -print | xargs /usr/lib/jvm/java-8-openjdk-amd64/bin/javac"
-alias update="sudo apt update && sudo apt upgrade -y && sudo snap refresh && rustup update && cargo install-update -a && brew update && brew upgrade && flatpak update && poetry self update "
+alias update="sudo apt update && sudo apt upgrade -y && rustup update && cargo install-update -a && brew update && brew upgrade && flatpak update && poetry self update "
 alias pkgclean="sudo apt autoremove && flatpak uninstall --unused && brew autoremove"
 alias dndg="(cd ~/Programming/Projects/JS/dnd-cli && node index.js c)"
 alias cp="cp -i"
 alias ite_kb="ite8291r3-ctl"
 alias mpvt="mpv --no-config --vo=tct "
+alias oshfs="sshfs OCI:/home/ubuntu /media/ulrich/OCI-sshfs"
+alias xt="TERM=xterm-256color"
+alias xssh="TERM=xterm-256color ssh"
 export BAT_THEME="OneHalfDark"
 export BAT_PAGER=""
 
@@ -86,12 +95,12 @@ else
     export PS1="${JOBS}\A ${PS1} \w *\$ "
 fi
 
+export NVM_SYMLINK_CURRENT="true"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
-eval "$(pyenv init -)"
 export PATH="/home/ulrich/.cargo/bin:$PATH"
 source /home/ulrich/Software/alacritty/extra/completions/alacritty.bash
 # eval "$(oh-my-posh init bash)"

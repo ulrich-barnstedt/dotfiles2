@@ -8,8 +8,5 @@ require'nvim-treesitter.configs'.setup {
                 return true
             end
         end,
-    },
-    context_commentstring = {
-        enable = true
     }
 }
